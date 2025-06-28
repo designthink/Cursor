@@ -1,4 +1,4 @@
-# Cursor Platform-Adaptive UI Design Prompt v1.1
+# Cursor Platform-Adaptive UI Design Prompt v1.2
 
 ## WORKFLOW
 
@@ -7,8 +7,10 @@
 ### STEP 1: Requirements
 Ask these questions ONE AT A TIME, waiting for answers:
 1. **Platform?** → `[A: iPhone, B: iPad, C: macOS, D: Web, E:watchOS]`
-2. **Orientation?** → `[P: Portrait, L: Landscape]`
-3. **References?** → `[Apps that represent desired UI/cagtegory/aesthetic (Optional/N)]`
+2. **Style?** → `[A: Native, B: Dark Mode, C: Custom (Describe)]`
+3. **Device frame?** → `[Y: Yes, show device body / window chrome, N: No, UI only]`
+4. **Orientation? (iPhone/iPad only)** → `[P: Portrait, L: Landscape]` . Skip this question if macOS or Web - default to Landscape.
+5. **References?** → `[Apps that represent desired UI/cagtegory/aesthetic (Optional/N)]`
 
 ### STEP 2: App Details
 4. **Application Name**: [Used for the HTML filename]
