@@ -176,7 +176,7 @@ Before generating, verify:
 ---
 
 ## ITERATION WORKFLOW
-After generating the initial screen, ask: 
+After generating the initial screen, STOP and ask: 
 **"Would you like me to create:**
 - **[V] Another variation** (different layout/style/approach)
 - **[N] Next logical screen** in user flow
