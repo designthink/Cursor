@@ -64,7 +64,7 @@
 
 ## Cursor Rules & Prompts
 
-### Cursor UI Design Prompt
+### [Cursor UI Design Prompt](https://github.com/designthink/Cursor/blob/main/Cursor-UI-Design-Prompt.md)
 This is a platform-adaptive UI Design prompt for use in Cursor chat. Use it to creating native-looking user interfaces across different platforms (iPhone, iPad, macOS, and Web).
 
 #### If you just want to try it out:
