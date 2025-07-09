@@ -1,19 +1,21 @@
-# Cursor Platform-Adaptive UI Design Prompt
+# Cursor Platform-Adaptive UI Design Prompt v1.2
 
 ## WORKFLOW
 
-**Please provide the following information:**
+**Gather these details:**
 
-### STEP 1: Gather Requirements
+### STEP 1: Requirements
 Ask these questions ONE AT A TIME, waiting for answers:
-1. **Platform?** → `[A: iPhone, B: iPad, C: macOS, D: Web]`
-2. **Orientation?** → `[P: Portrait, L: Landscape]`
-3. **References?** → `[Are there any apps that represent the UI, category, or aesthetic style you are aiming for (Optional/N)]`
+1. **Platform?** → `[A: iPhone, B: iPad, C: macOS, D: Web, E:watchOS]`
+2. **Style?** → `[A: Native, B: Dark Mode, C: Custom (Describe)]`
+3. **Device frame?** → `[Y: Yes, show device body / window chrome, N: No, UI only]`
+4. **Orientation? (iPhone/iPad only)** → `[P: Portrait, L: Landscape]` . Skip this question if macOS or Web - default to Landscape.
+5. **References?** → `[Apps that represent desired UI/cagtegory/aesthetic (Optional/N)]`
 
-### STEP 2: Application Details
-4. **Application Name**: [Enter app name - this will be used for the HTML filename]
-5. **Brief Description**: [Describe the main purpose and key features of your application]
-6. **Primary User Actions**: [List 3-5 main things users will do in this app]
+### STEP 2: App Details
+4. **Application Name**: [Used for the HTML filename]
+5. **Brief Description**: [Main purpose and key features]
+6. **Primary User Actions**: [3-5 main user actions]
 
 ### STEP 3: Plan
 7. Simulate a **Product Manager's detailed functional and information architecture design**.
@@ -62,11 +64,11 @@ You are a **senior front-end developer and UI designer** specializing in [PLATFO
 - **Scrollable Areas**: Implement internal scrolling within defined regions only
 
 ## Critical UI Elements (MUST BE VISIBLE)
-- **Primary User Actions**: MUST include all controls/buttons for the main user actions specified in requirements
-- **Input Fields**: MUST include any required text inputs, forms, or data entry areas
-- **Interactive Elements**: MUST ensure all clickable/tappable elements are clearly identifiable
-- **Navigation Elements**: MUST include any required navigation, menus, or wayfinding controls
-- **Visual Hierarchy**: MUST make the most important actions/controls the most prominent
+- **Primary User Actions**: MUST include all controls/buttons for main user actions.
+- **Input Fields**: MUST include required text inputs, forms, or data entry areas
+- **Interactive Elements**: MUST ensure clearly identifiable clickable/tappable elements.
+- **Navigation Elements**: MUST include required navigation/ menus/wayfinding controls.
+- **Visual Hierarchy**: MUST make the most important actions/controls the most prominent.
 
 ## Layout Requirements
 - **Primary Actions**: Most important user actions MUST be prominently positioned
@@ -81,18 +83,20 @@ You are a **senior front-end developer and UI designer** specializing in [PLATFO
 ## Task
 Create **[APP_NAME]** - [APP_DESCRIPTION]
 
+IMPORTANT: Your design must feel like a REAL, production-ready application.
+
 Key Features:
 [USER_ACTIONS_LIST]
 
 Requirements:
 - Simulate a **[PLATFORM] native application** appearance using HTML/CSS.
-- Follow the **design style** and **technical specifications** to generate a complete **UI design**.
-- Create a **[APP_NAME].html** file that contains the main interface.
-- Include platform-appropriate navigation, inputs and controls.
+- Follow **design style** and **technical specifications** to generate a COMPLETE **UI design**.
+- Create a **[APP_NAME].html** file that contains the main interface. Background: #f9fafbff.
+- Include platform-appropriate navigation/inputs/controls.
 - Ensure responsive behavior appropriate for [DEVICE].
-- When creating multiple screens, arrange them **horizontally** in the same file.
+- Multiple screens should be arranged **horizontally** in same file.
 
-Generate the complete application interface now. When finished, offer to run/open the generated html file.
+Generate the complete application interface now. When finished, offer to run/open the HTML file.
 ```
 
 ---
@@ -103,40 +107,54 @@ Generate the complete application interface now. When finished, offer to run/ope
 - **DIMENSIONS**: 393×852px (iPhone 15 Pro)
 - **PLATFORM_FONTS**: -apple-system, SF Pro Display
 - **PLATFORM_SPECIFIC_RULES**: 
-  - Include iOS-style navigation bar with back button
-  - Use iOS tab bar for main navigation
-  - Implement iOS-style switches, buttons, and form controls
-  - Include safe area margins
-  - Use iOS-style modals and sheets
+  - iOS navigation bar with back button
+  - iOS tab bar for main navigation
+  - iOS switches, buttons, form controls
+  - Safe area margins
+  - iOS modals/sheets
+  - System colors: Use iOS semantic colors (systemBlue, systemGray, etc.)
+  - Status bar: Account for dynamic island/notch
 
 ### iOS (iPad, iOS 17+)
 - **DIMENSIONS**: 1024x768px (landscape) or 768x1024px (portrait)
 - **PLATFORM_FONTS**: -apple-system, SF Pro Display
-- **PLATFORM_SPECIFIC_RULES**:
-  - Include iPad-style split view or sidebar navigation
-  - Use popovers instead of full-screen modals
-  - Implement iPad-specific multi-column layouts
-  - Include iOS-style navigation patterns
+- - **PLATFORM_SPECIFIC_RULES**:
+  - iPad split view/sidebar navigation
+  - Popovers not full-screen modals
+  - iPad multi-column layouts
+  - iOS navigation patterns
+  - Multitasking: Design for 1/3, 1/2, 2/3 split views
 
 ### macOS Desktop (Sonoma+)
 - **DIMENSIONS**: 1280x832px with window chrome
 - **PLATFORM_FONTS**: -apple-system, SF Pro Display
 - **PLATFORM_SPECIFIC_RULES**:
-  - Include macOS window frame (traffic lights, title bar)
-  - Use macOS-style sidebar navigation
-  - Implement native-looking toolbar
+  - macOS window frame (traffic lights, title bar)
+  - macOS sidebar navigation
+  - Native toolbar
   - No custom scrollbars
-  - Use macOS button styles and form controls
+  - macOS button/form styles
+  - Standard spacing: 20pt margins, 8pt between elements
 
 ### Web Application (Desktop, Modern)
 - **DIMENSIONS**: 1440x900px viewport
 - **PLATFORM_FONTS**: Inter, system-ui, sans-serif
 - **PLATFORM_SPECIFIC_RULES**:
-  - Responsive design with max-width containers
-  - Modern web navigation patterns
-  - Include hover states for all interactive elements
-  - Use modern CSS features and animations
-  - Implement keyboard navigation
+  - Responsive with max-width containers
+  - Modern web navigation
+  - Hover states for interactive elements
+  - Modern CSS features/animations
+  - Keyboard navigation
+  - WCAG 2.1: AAA contrast ratios (7:1 for normal text)
+
+### watchOS (Series 10, watchOS 10+)
+- **DIMENSIONS**: 416x496px
+- **PLATFORM_FONTS**: -apple-system, SF Compact
+- **PLATFORM_SPECIFIC_RULES**:
+  - watchOS navigation practices
+  - watchOS switches, buttons, controls
+  - Safe area margins
+  - watchOS modals/sheets
 
 ---
 
@@ -144,29 +162,31 @@ Generate the complete application interface now. When finished, offer to run/ope
 Before generating, verify:
 ✓ Platform-specific UI elements included
 ✓ Real, contextual content (no placeholders)
-✓ Proper resolution and proportions
+✓ Proper resolution/proportions
 ✓ Clear visual hierarchy
-✓ All primary user actions from requirements are implemented and visible
-✓ All required input fields/controls are prominently displayed
-✓ Interactive elements have proper styling and focus states
-✓ Navigation and wayfinding elements are clear and accessible
-✓ No essential functionality is hidden or obscured
-✓ Interface feels complete and functional for intended use cases
-✓ All elements are within viewport boundaries with proper margins
-✓ Multiple screens (if any) are arranged horizontally
+✓ All primary user actions implemented/visible
+✓ Required inputs/controls prominently displayed
+✓ Interactive elements properly styled with focus states
+✓ Navigation/wayfinding clear/accessible
+✓ No essential functionality hidden or obscured
+✓ Interface complete/functional
+✓ Elements within viewport with margins
+✓ Multiple screens arranged horizontally
 
 ---
 
 ## ITERATION WORKFLOW
-After generating the initial screen, ask: 
+After generating the initial screen, STOP and ask: 
 **"Would you like me to create:**
-- **[V] Another variation** of this screen (different layout/style approach)
-- **[N] The next logical screen** in the user flow
-- **[E] Edit/refine** the current screen
-- **[D] Done** - finalize the current design"
+- **[V] Another variation** (different layout/style/approach)
+- **[N] Next logical screen** in user flow
+- **[E] Edit/refine** current screen
+- **[W] Web app version** of current screen
+- **[M] Mobile (iPhone) version** of current screen
+- **[D] Done** - finalize current design"
 
-If V or N is selected:
-- Add the new screen to **the same HTML file**
-- Display screens **horizontally side-by-side**
+If V/N/W/M selected:
+- Add to **same HTML file**
+- Display **horizontally side-by-side**
 - Label each screen clearly (e.g., "Screen 1: Login", "Screen 2: Dashboard")
-- Maintain consistent viewport dimensions across all screens
+- Maintain consistent viewport dimensions per platform
